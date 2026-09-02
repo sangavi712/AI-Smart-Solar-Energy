@@ -13,12 +13,14 @@ function Login() {
 
         const newErrors = {};
 
+        // Email validation
         if (!email.trim()) {
             newErrors.email = "Email is required";
         } else if (!/\S+@\S+\.\S+/.test(email)) {
             newErrors.email = "Please enter a valid email";
         }
 
+        // Password validation
         if (!password.trim()) {
             newErrors.password = "Password is required";
         } else if (password.length < 6) {
@@ -27,6 +29,7 @@ function Login() {
 
         setErrors(newErrors);
 
+        // If no errors
         if (Object.keys(newErrors).length === 0) {
             alert("Login validation successful!");
         }
@@ -36,8 +39,12 @@ function Login() {
         <div className="login-page">
             <div className="login-card">
 
-                <div className="logo">☀️</div>
+                {/* Logo */}
+                <div className="logo">
+                    ☀️
+                </div>
 
+                {/* Title */}
                 <h1>AI Smart Solar</h1>
 
                 <p className="subtitle">
@@ -48,14 +55,22 @@ function Login() {
 
                     {/* Email */}
                     <div className="input-group">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email">
+                            Email
+                        </label>
 
                         <input
                             id="email"
                             type="email"
                             placeholder="Enter your email"
                             value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            onChange={(e) => {
+                                setEmail(e.target.value);
+                                setErrors({
+                                    ...errors,
+                                    email: ""
+                                });
+                            }}
                         />
 
                         {errors.email && (
@@ -67,29 +82,45 @@ function Login() {
 
                     {/* Password */}
                     <div className="input-group">
-                        <label htmlFor="password">Password</label>
+                        <label htmlFor="password">
+                            Password
+                        </label>
 
                         <div className="password-wrapper">
 
                             <input
                                 id="password"
-                                type={showPassword ? "text" : "password"}
+                                type={
+                                    showPassword
+                                        ? "text"
+                                        : "password"
+                                }
                                 placeholder="Enter your password"
                                 value={password}
-                                onChange={(e) => setPassword(e.target.value)}
+                                onChange={(e) => {
+                                    setPassword(e.target.value);
+                                    setErrors({
+                                        ...errors,
+                                        password: ""
+                                    });
+                                }}
                             />
 
                             <button
                                 type="button"
                                 className="password-toggle"
-                                onClick={() => setShowPassword(!showPassword)}
+                                onClick={() =>
+                                    setShowPassword(!showPassword)
+                                }
                                 aria-label={
                                     showPassword
                                         ? "Hide password"
                                         : "Show password"
                                 }
                             >
-                                {showPassword ? "🙈" : "👁️"}
+                                {showPassword
+                                    ? "🙈"
+                                    : "👁️"}
                             </button>
 
                         </div>
@@ -101,7 +132,7 @@ function Login() {
                         )}
                     </div>
 
-                    {/* Options */}
+                    {/* Remember Me & Forgot Password */}
                     <div className="login-options">
 
                         <label>
@@ -109,9 +140,10 @@ function Login() {
                             Remember me
                         </label>
 
-                        <a href="#" onClick={(e) => e.preventDefault()}>
+                        {/* Forgot Password Navigation */}
+                        <Link to="/forgot-password">
                             Forgot Password?
-                        </a>
+                        </Link>
 
                     </div>
 
@@ -125,11 +157,13 @@ function Login() {
                 {/* Register Link */}
                 <p className="register-link">
                     Don't have an account?{" "}
+
                     <Link to="/register">
                         Create Account
                     </Link>
                 </p>
 
+                {/* Footer */}
                 <p className="footer-text">
                     AI Smart Solar Energy Management System
                 </p>
