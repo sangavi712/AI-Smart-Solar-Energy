@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./../App.css";
 
 function Login() {
+    const navigate = useNavigate();
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
@@ -24,14 +26,15 @@ function Login() {
         if (!password.trim()) {
             newErrors.password = "Password is required";
         } else if (password.length < 6) {
-            newErrors.password = "Password must be at least 6 characters";
+            newErrors.password =
+                "Password must be at least 6 characters";
         }
 
         setErrors(newErrors);
 
-        // If no errors
+        // Login success
         if (Object.keys(newErrors).length === 0) {
-            alert("Login validation successful!");
+            navigate("/dashboard");
         }
     };
 
@@ -55,6 +58,7 @@ function Login() {
 
                     {/* Email */}
                     <div className="input-group">
+
                         <label htmlFor="email">
                             Email
                         </label>
@@ -66,6 +70,7 @@ function Login() {
                             value={email}
                             onChange={(e) => {
                                 setEmail(e.target.value);
+
                                 setErrors({
                                     ...errors,
                                     email: ""
@@ -78,10 +83,12 @@ function Login() {
                                 {errors.email}
                             </p>
                         )}
+
                     </div>
 
                     {/* Password */}
                     <div className="input-group">
+
                         <label htmlFor="password">
                             Password
                         </label>
@@ -99,6 +106,7 @@ function Login() {
                                 value={password}
                                 onChange={(e) => {
                                     setPassword(e.target.value);
+
                                     setErrors({
                                         ...errors,
                                         password: ""
@@ -110,7 +118,9 @@ function Login() {
                                 type="button"
                                 className="password-toggle"
                                 onClick={() =>
-                                    setShowPassword(!showPassword)
+                                    setShowPassword(
+                                        !showPassword
+                                    )
                                 }
                                 aria-label={
                                     showPassword
@@ -130,9 +140,10 @@ function Login() {
                                 {errors.password}
                             </p>
                         )}
+
                     </div>
 
-                    {/* Remember Me & Forgot Password */}
+                    {/* Login Options */}
                     <div className="login-options">
 
                         <label>
@@ -140,7 +151,6 @@ function Login() {
                             Remember me
                         </label>
 
-                        {/* Forgot Password Navigation */}
                         <Link to="/forgot-password">
                             Forgot Password?
                         </Link>
@@ -154,13 +164,15 @@ function Login() {
 
                 </form>
 
-                {/* Register Link */}
+                {/* Register */}
                 <p className="register-link">
+
                     Don't have an account?{" "}
 
                     <Link to="/register">
                         Create Account
                     </Link>
+
                 </p>
 
                 {/* Footer */}

@@ -1,0 +1,506 @@
+.energy-layout {
+    min-height: 100vh;
+    background: #f5f8f6;
+}
+
+.energy-main {
+    margin-left: 260px;
+    min-height: 100vh;
+}
+
+/* Header */
+
+.energy-header {
+    min-height: 80px;
+    background: white;
+    border-bottom: 1px solid #e5ebe7;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.energy-header h1 {
+    margin: 0;
+    color: #163b25;
+    font-size: 24px;
+}
+
+.energy-header p {
+    margin: 6px 0 0;
+    color: #718078;
+    font-size: 13px;
+}
+
+.energy-date {
+    padding: 9px 14px;
+    border: 1px solid #dfe7e2;
+    border-radius: 8px;
+    color: #405048;
+    background: white;
+    font-size: 12px;
+}
+
+/* Content */
+
+.energy-content {
+    padding: 28px 30px;
+}
+
+/* Stats */
+
+.energy-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.energy-stat-card {
+    background: white;
+    border: 1px solid #e4ebe6;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.2s ease;
+}
+
+.energy-stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.energy-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #eaf8ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.energy-stat-card p {
+    margin: 0 0 5px;
+    color: #718078;
+    font-size: 11px;
+}
+
+.energy-stat-card h2 {
+    margin: 0;
+    color: #163b25;
+    font-size: 21px;
+}
+
+.energy-stat-card span {
+    display: block;
+    margin-top: 5px;
+    color: #28a745;
+    font-size: 10px;
+}
+
+/* Grid */
+
+.energy-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.energy-card {
+    background: white;
+    border: 1px solid #e4ebe6;
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.energy-card h2 {
+    margin: 0;
+    color: #163b25;
+    font-size: 17px;
+}
+
+.energy-card p {
+    margin: 5px 0 0;
+    color: #7a857e;
+    font-size: 11px;
+}
+
+/* Card Header */
+
+.energy-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.energy-card-header select {
+    padding: 8px 12px;
+    border: 1px solid #dce5df;
+    border-radius: 7px;
+    background: white;
+    color: #405048;
+    font-size: 11px;
+}
+
+/* Chart */
+
+.usage-chart {
+    height: 280px;
+    display: flex;
+    margin-top: 25px;
+}
+
+.y-axis {
+    width: 45px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #89948d;
+    font-size: 9px;
+    padding-bottom: 22px;
+    box-sizing: border-box;
+}
+
+.chart-area {
+    position: relative;
+    flex: 1;
+    height: 220px;
+    border-bottom: 1px solid #dfe7e2;
+}
+
+.chart-grid-line {
+    height: 1px;
+    background: #edf1ee;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.chart-grid-line:nth-child(1) {
+    top: 0;
+}
+
+.chart-grid-line:nth-child(2) {
+    top: 25%;
+}
+
+.chart-grid-line:nth-child(3) {
+    top: 50%;
+}
+
+.chart-grid-line:nth-child(4) {
+    top: 75%;
+}
+
+.chart-grid-line:nth-child(5) {
+    top: 100%;
+}
+
+.usage-bars {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    position: relative;
+    z-index: 2;
+}
+
+.usage-column {
+    height: 100%;
+    width: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.usage-bar {
+    width: 30px;
+    background: #28a745;
+    border-radius: 6px 6px 0 0;
+    transition: 0.25s;
+}
+
+.usage-bar:hover {
+    transform: scaleY(1.05);
+}
+
+.usage-column span {
+    position: absolute;
+    transform: translateY(28px);
+    font-size: 9px;
+    color: #7a857e;
+    white-space: nowrap;
+}
+
+/* Breakdown */
+
+.breakdown-circle {
+    width: 145px;
+    height: 145px;
+    margin: 25px auto;
+    border-radius: 50%;
+    background: conic-gradient(#28a745 0deg 274deg,
+            #c9e7d1 274deg 360deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.breakdown-circle::before {
+    content: "";
+    position: absolute;
+}
+
+.breakdown-circle>div {
+    width: 105px;
+    height: 105px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.breakdown-circle strong {
+    font-size: 22px;
+    color: #163b25;
+}
+
+.breakdown-circle span {
+    color: #7a857e;
+    font-size: 10px;
+}
+
+.breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #edf1ee;
+    color: #58655d;
+    font-size: 11px;
+}
+
+.breakdown-item span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breakdown-item i {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.solar-dot {
+    background: #28a745;
+}
+
+.battery-dot {
+    background: #9ac9a7;
+}
+
+.breakdown-item strong {
+    color: #193d28;
+}
+
+/* Appliance */
+
+.appliance-card {
+    min-height: 320px;
+}
+
+.appliance-list {
+    margin-top: 18px;
+}
+
+.appliance-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #edf1ee;
+}
+
+.appliance-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.appliance-name>span {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: #eef7f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.appliance-name strong {
+    display: block;
+    color: #193d28;
+    font-size: 12px;
+}
+
+.appliance-name small {
+    display: block;
+    margin-top: 4px;
+    color: #89948d;
+    font-size: 9px;
+}
+
+.appliance-value {
+    width: 100px;
+    text-align: right;
+}
+
+.appliance-value>strong {
+    color: #193d28;
+    font-size: 11px;
+}
+
+.mini-progress {
+    height: 5px;
+    background: #e8eee9;
+    border-radius: 10px;
+    margin-top: 6px;
+    overflow: hidden;
+}
+
+.mini-progress div {
+    height: 100%;
+    background: #28a745;
+    border-radius: 10px;
+}
+
+/* Efficiency */
+
+.efficiency-card {
+    min-height: 320px;
+}
+
+.efficiency-score {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.score-circle {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    border: 10px solid #28a745;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-circle strong {
+    color: #163b25;
+    font-size: 25px;
+}
+
+.score-circle span {
+    color: #28a745;
+    font-size: 10px;
+    font-weight: 600;
+    margin-top: 3px;
+}
+
+.efficiency-message {
+    padding: 12px;
+    background: #eaf8ef;
+    border-radius: 9px;
+    color: #26753d;
+    font-size: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.efficiency-message span {
+    font-size: 14px;
+}
+
+/* Footer */
+
+.energy-footer {
+    padding: 20px 30px;
+    text-align: center;
+    color: #89948d;
+    font-size: 10px;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+
+    .energy-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .energy-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .energy-main {
+        margin-left: 70px;
+    }
+
+    .energy-header {
+        padding: 15px 18px;
+    }
+
+    .energy-header h1 {
+        font-size: 19px;
+    }
+
+    .energy-date {
+        display: none;
+    }
+
+    .energy-content {
+        padding: 18px;
+    }
+
+    .energy-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .energy-card {
+        padding: 18px;
+    }
+
+    .energy-card-header select {
+        padding: 6px;
+    }
+
+    .usage-chart {
+        overflow-x: auto;
+    }
+
+    .chart-area {
+        min-width: 400px;
+    }
+
+    .appliance-item {
+        gap: 10px;
+    }
+}

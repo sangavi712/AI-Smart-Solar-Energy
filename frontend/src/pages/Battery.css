@@ -1,0 +1,614 @@
+.battery-layout {
+    min-height: 100vh;
+    background: #f5f8f6;
+}
+
+.battery-main {
+    margin-left: 260px;
+    min-height: 100vh;
+}
+
+/* Header */
+
+.battery-header {
+    min-height: 80px;
+    background: white;
+    border-bottom: 1px solid #e5ebe7;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.battery-header h1 {
+    margin: 0;
+    color: #163b25;
+    font-size: 24px;
+}
+
+.battery-header p {
+    margin: 6px 0 0;
+    color: #718078;
+    font-size: 13px;
+}
+
+.battery-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    background: #eaf8ef;
+    color: #218838;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.battery-status span {
+    width: 8px;
+    height: 8px;
+    background: #28a745;
+    border-radius: 50%;
+}
+
+/* Content */
+
+.battery-content {
+    padding: 28px 30px;
+}
+
+/* Cards */
+
+.battery-card {
+    background: white;
+    border: 1px solid #e4ebe6;
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.battery-card h2 {
+    margin: 0;
+    color: #163b25;
+    font-size: 17px;
+}
+
+.battery-card p {
+    margin: 5px 0 0;
+    color: #7a857e;
+    font-size: 11px;
+}
+
+.battery-card-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.battery-card-title select {
+    padding: 8px 12px;
+    border: 1px solid #dce5df;
+    border-radius: 7px;
+    background: white;
+    color: #405048;
+    font-size: 11px;
+}
+
+/* Overview */
+
+.battery-overview {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Battery Level */
+
+.battery-level {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin: 25px 0;
+}
+
+.battery-visual {
+    display: flex;
+    align-items: center;
+}
+
+.battery-body {
+    width: 115px;
+    height: 175px;
+    border: 4px solid #285c39;
+    border-radius: 14px;
+    padding: 6px;
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    background: #f3f8f4;
+}
+
+.battery-fill {
+    width: 100%;
+    background: #28a745;
+    border-radius: 7px;
+    transition: 0.4s;
+}
+
+.battery-tip {
+    width: 20px;
+    height: 38px;
+    background: #285c39;
+    border-radius: 0 7px 7px 0;
+    margin-left: -2px;
+}
+
+.battery-percentage strong {
+    display: block;
+    color: #163b25;
+    font-size: 42px;
+}
+
+.battery-percentage span {
+    display: block;
+    margin-top: 6px;
+    color: #7a857e;
+    font-size: 11px;
+}
+
+.battery-progress {
+    height: 8px;
+    background: #e8eee9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.battery-progress div {
+    height: 100%;
+    background: #28a745;
+    border-radius: 10px;
+}
+
+.battery-range {
+    display: flex;
+    justify-content: space-between;
+    color: #89948d;
+    font-size: 9px;
+    margin-top: 6px;
+}
+
+/* Power */
+
+.power-value {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.power-value strong {
+    display: block;
+    color: #163b25;
+    font-size: 30px;
+}
+
+.power-value span {
+    display: block;
+    margin-top: 5px;
+    color: #28a745;
+    font-size: 11px;
+}
+
+.power-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+}
+
+.power-node {
+    text-align: center;
+    padding: 10px;
+}
+
+.power-node span {
+    display: block;
+    font-size: 22px;
+}
+
+.power-node strong {
+    display: block;
+    margin-top: 5px;
+    color: #193d28;
+    font-size: 12px;
+}
+
+.power-node small {
+    color: #89948d;
+    font-size: 9px;
+}
+
+.power-node.active {
+    background: #eaf8ef;
+    border-radius: 10px;
+}
+
+.power-arrow {
+    color: #28a745;
+    font-size: 20px;
+}
+
+/* Stats */
+
+.battery-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.battery-stat {
+    background: white;
+    border: 1px solid #e4ebe6;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.battery-stat>div {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #eaf8ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+.battery-stat p {
+    margin: 13px 0 4px;
+    color: #718078;
+    font-size: 10px;
+}
+
+.battery-stat strong {
+    color: #163b25;
+    font-size: 21px;
+}
+
+.battery-stat span {
+    display: block;
+    margin-top: 5px;
+    color: #89948d;
+    font-size: 9px;
+}
+
+/* Main Grid */
+
+.battery-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+/* Chart */
+
+.battery-chart {
+    height: 270px;
+    display: flex;
+    margin-top: 25px;
+}
+
+.battery-y-axis {
+    width: 45px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #89948d;
+    font-size: 9px;
+}
+
+.battery-chart-area {
+    flex: 1;
+    height: 210px;
+    position: relative;
+    border-bottom: 1px solid #dfe7e2;
+}
+
+.chart-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #edf1ee;
+}
+
+.chart-line:nth-child(1) {
+    top: 0;
+}
+
+.chart-line:nth-child(2) {
+    top: 25%;
+}
+
+.chart-line:nth-child(3) {
+    top: 50%;
+}
+
+.chart-line:nth-child(4) {
+    top: 75%;
+}
+
+.chart-line:nth-child(5) {
+    top: 100%;
+}
+
+.battery-chart-bars {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    position: relative;
+    z-index: 2;
+}
+
+.battery-bar {
+    width: 30px;
+    background: #28a745;
+    border-radius: 6px 6px 0 0;
+}
+
+.battery-time-labels {
+    position: absolute;
+    top: calc(100% + 10px);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: #7a857e;
+    font-size: 9px;
+}
+
+/* Health */
+
+.health-circle {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    border: 10px solid #28a745;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.health-circle strong {
+    color: #163b25;
+    font-size: 28px;
+}
+
+.health-circle span {
+    color: #28a745;
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+.health-info div {
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 0;
+    border-bottom: 1px solid #edf1ee;
+}
+
+.health-info span {
+    color: #718078;
+    font-size: 10px;
+}
+
+.health-info strong {
+    color: #193d28;
+    font-size: 11px;
+}
+
+/* Flow */
+
+.flow-card {
+    min-height: 200px;
+}
+
+.battery-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.flow-item {
+    min-width: 105px;
+    text-align: center;
+    padding: 15px 10px;
+    border: 1px solid #e1e9e3;
+    border-radius: 11px;
+}
+
+.flow-item span {
+    display: block;
+    font-size: 23px;
+}
+
+.flow-item strong {
+    display: block;
+    margin-top: 6px;
+    color: #193d28;
+    font-size: 12px;
+}
+
+.flow-item small {
+    display: block;
+    margin-top: 3px;
+    color: #89948d;
+    font-size: 9px;
+}
+
+.flow-item.battery-active {
+    background: #eaf8ef;
+    border-color: #bfe2c8;
+}
+
+.flow-arrow {
+    color: #28a745;
+    font-size: 20px;
+}
+
+/* Alerts */
+
+.alerts-card {
+    min-height: 200px;
+}
+
+.battery-alert {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 9px;
+}
+
+.battery-alert>span {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.battery-alert strong {
+    display: block;
+    color: #193d28;
+    font-size: 10px;
+}
+
+.battery-alert small {
+    display: block;
+    margin-top: 3px;
+    color: #718078;
+    font-size: 9px;
+}
+
+.success-alert {
+    background: #eaf8ef;
+}
+
+.success-alert>span {
+    background: #28a745;
+    color: white;
+}
+
+.info-alert {
+    background: #eef6f8;
+}
+
+.info-alert>span {
+    background: #4a9db0;
+    color: white;
+}
+
+.warning-alert {
+    background: #fff8e8;
+}
+
+.warning-alert>span {
+    background: #e5a82d;
+    color: white;
+}
+
+/* Footer */
+
+.battery-footer {
+    padding: 20px 30px;
+    text-align: center;
+    color: #89948d;
+    font-size: 10px;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+
+    .battery-overview,
+    .battery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .battery-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .battery-main {
+        margin-left: 70px;
+    }
+
+    .battery-header {
+        padding: 15px 18px;
+    }
+
+    .battery-header h1 {
+        font-size: 19px;
+    }
+
+    .battery-status {
+        display: none;
+    }
+
+    .battery-content {
+        padding: 18px;
+    }
+
+    .battery-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .battery-level {
+        gap: 18px;
+    }
+
+    .battery-body {
+        width: 85px;
+        height: 140px;
+    }
+
+    .battery-percentage strong {
+        font-size: 32px;
+    }
+
+    .power-flow,
+    .battery-flow {
+        flex-direction: column;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+
+    .battery-card {
+        padding: 18px;
+    }
+
+    .battery-chart {
+        overflow-x: auto;
+    }
+
+    .battery-chart-area {
+        min-width: 420px;
+    }
+}
